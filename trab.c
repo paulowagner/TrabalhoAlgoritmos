@@ -12,8 +12,8 @@ int main(int argc, char const *argv[])
 	double f[N];
 	memset(v,0,sizeof(double)*N);
 	memset(f,0,sizeof(double)*N);
-	v[0] = -24.5;
-	v[98] = -9.5;
+	v[0] = 0.5;
+	v[98] = 0.5;
 	f[0] = 49/H;
 	f[98] = 19/H;
 	double mod=0;
