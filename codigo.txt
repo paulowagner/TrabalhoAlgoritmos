@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main(void) {
+	
+	int h = 0.0001 , w = 1 , e = 0,00000001 ;// 10^-8;
+	double f [99] , v1 [99] , v2[99] ;
+	double solucao[98];
+	v1[0] = -24.5;//lembrar que começa na posição 0.
+	v1[98] = -9.5;//lembrar que acaba na posição 0.
+	f[0]=49/(h); //lembrar que começa na posição 0.
+	f[98]=19/(h);// lemrar que acaba na posição 98.
+	
+	v2[0] = (-w/2)(h*f[0] - 50  - v1[1]) + (1-w)*v1[0];
+	
+	while () 
+	
+	
+	
+	return 0;
+}
