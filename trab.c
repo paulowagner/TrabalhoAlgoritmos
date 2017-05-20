@@ -19,27 +19,27 @@ int main(int argc, char const *argv[])
 	double mod=0;
 	do{
 		mod=0;
-		u(0) = (1/−2)*((H)*f[0] − 50 − u(i+1)); 
+		u(0) = (1/-2)*((H)*f[0] - 50 - u(i+1)); 
 		mod+=u(0)*u(0);
 		for (i = 1; i < N-1; ++i)
 		{
-			u(i) = (1/−2)*((H)*f[i] − u(i−1) − u(i+1));
+			u(i) = (1/-2)*((H)*f[i] - u(i-1) - u(i+1));
 			mod+=u(i)*u(i);
 		}
-		u(i) = (1/−2)*((H)*f[i] − u(i−1) − 100);
+		u(i) = (1/-2)*((H)*f[i] - u(i-1) - 100);
 		mod+=u(i)*u(i);
 		k++;
 	}while(1/sqrt(mod)>10e-7);
 	do{
 		mod=0;
-		u(0) = (W/−2)*((H)*f[i] − 50 − u(i+1))+(1−W)*u(0); 
+		u(0) = (W/-2)*((H)*f[i] - 50 - u(i+1))+(1-W)*u(0); 
 		mod+=u(0)*u(0);
 		for (i = 1; i < N-1; ++i)
 		{
-			u(i) = (W/−2)*((H)*f[i] − u(i−1) − u(i+1))+(1−W)*u(i);
+			u(i) = (W/-2)*((H)*f[i] - u(i-1) - u(i+1))+(1-W)*u(i);
 			mod+=u(i)*u(i);
 		}
-		u(i) = (W/−2)*((H)*f[i] − u(i−1) − 100)+(1−W)*u(i);
+		u(i) = (W/-2)*((H)*f[i] - u(i-1) - 100)+(1-W)*u(i);
 		mod+=u(i)*u(i);
 		k--;
 	}while(k>0&&1/sqrt(mod)>10e-7);
